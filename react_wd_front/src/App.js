@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import styles from './App.css';
 import MyTestComponent from './MyTestComponent'
 import DefaultPropsTest from './DefaultPropsTest'
 import TypePropsTest from './TypePropsTest'
@@ -19,9 +19,18 @@ import AddEnterEvent from './event/AddEnterEvent'
 import BGTest from './reference/BGTest'
 import RefBoxTest from './reference/RefBoxTest'
 import RefBoxBottomTest from './reference/RefBoxBottomTest'
+import IterationSample from './repeat/IterationSample'
+import StateBasedIteration from './repeat/StateBasedIteration'
+import StateBasedEventIteration from './repeat/StateBasedEventIteration'
+import LifeCycleSample from './lifecycle/LifeCycleSample'
+import classNames from 'classnames/bind'
+import SassComponent from './SassComponent'
+
+const cx = classNames.bind(styles)
 
 // function App()
 class App extends Component {
+
     render() {
         const reactText = 'Golang'
         const condition = true
@@ -31,6 +40,17 @@ class App extends Component {
             height: Math.round(Math.random() * 300) + 50,
             width: Math.round(Math.random() * 300) + 50
         }
+        /*
+        const box = {
+            display: "inline-block",
+            width: "100px",
+            height: "100px",
+            border: "1px solid black",
+            position: "fixed",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)"
+        } */
         return (
             <div className="my-div">
                 <h1>Halo ReactJS</h1>
@@ -73,6 +93,17 @@ class App extends Component {
                 <RefBoxTest/>
                 <RefBoxBottomTest ref={(ref) => this.refBoxBottomTest = ref}/>
                 <button onClick={() => this.refBoxBottomTest.scrollToBottom()}>Bottom</button>
+                <IterationSample/>
+                <StateBasedIteration/>
+                <StateBasedEventIteration/>
+                <LifeCycleSample/>
+                <div className={ cx('testbox', 'blue') }>
+                    <h1>Hi</h1>
+                </div>
+                <div>
+                    <h1>Hello</h1>
+                    <SassComponent/>
+                </div>
             </div>
         );
     }
