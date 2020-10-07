@@ -15,7 +15,9 @@ class BGTest extends Component {
     handleClick = (e) => {
         this.setState({
             clicked: true,
-            validated: this.state.pw == 'wdd'
+            // ===는 일치 연산자다. ==인 동등 연산자와 달리
+            // 더 정확하게 비교할 수 있다(서로 다른 타입인 경우 타입을 강제로 변환하여 비교하지 않는다)
+            validated: this.state.pw === 'wdd'
         })
     }
     handleKeyPress = (e) => {

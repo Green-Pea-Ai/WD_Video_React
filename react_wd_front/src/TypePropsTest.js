@@ -6,6 +6,7 @@ class TypePropsTest extends Component {
         name: 'Default Name'
     }
     static propTypes = {
+        // 타입을 달리했을 때 오류가 나는 케이스 참고용
         name: PropTypes.string
     }
     render() {
