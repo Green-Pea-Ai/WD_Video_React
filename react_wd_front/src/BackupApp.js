@@ -29,6 +29,7 @@ import SassStyleComponent from './style_dir/SassStyleComponent'
 import CSSModule from './style_dir/CSSModule'
 import CMTest from './style_dir/CMTest'
 import StyledComponent from './style_dir/StyledComponent'
+import BindTest from './test/BindTest'
 
 const cx = classNames.bind(styles)
 
@@ -117,6 +118,7 @@ class BackupApp extends Component {
                     <CMTest/>
                     <StyledComponent/>
                 </div>
+                    <BindTest/>
             </div>
         );
     }
