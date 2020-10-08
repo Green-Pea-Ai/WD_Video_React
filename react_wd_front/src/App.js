@@ -6,6 +6,9 @@ import TodoList from './todo_components/TodoList'
 
 
 // It's for Todo App
+// 최신 업데이트로 state를 쓰려면 class가 아닌 function 내에서만
+// 써야하는 규칙이 생겨서 코드 변경함
+// 리액트는 버전이 올라가면 함수명이나 작동방식이 바뀌는 경우가 발생할 수 있다고 함
 const App = () => {
     const [todos, setTodos] = useState([
         {

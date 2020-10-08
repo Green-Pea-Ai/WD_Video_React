@@ -31,6 +31,12 @@ import CMTest from './style_dir/CMTest'
 import StyledComponent from './style_dir/StyledComponent'
 import BindTest from './test/BindTest'
 
+import { Route, Link, Switch } from 'react-router-dom'
+import About from './router_test/About'
+import Home from './router_test/Home'
+import Profiles from './router_test/Profiles'
+import HistorySample from './router_test/HistorySample'
+
 const cx = classNames.bind(styles)
 
 // function App()
@@ -59,6 +65,35 @@ class BackupApp extends Component {
 
         return (
             <div className="my-div">
+                <ul>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/profiles">Profile</Link>
+                    </li>
+                    <li>
+                        <Link to="/history">History</Link>
+                    </li>
+                </ul>
+                <hr/>
+                <Switch>
+                    <Route path="/" component={ Home } exact={ true }/>
+                    <Route path={[ "/about", "/info" ]} component={ About }/>
+                    <Route path={ "/profiles" } component={ Profiles }/>
+                    <Route path={ "/history" } component={ HistorySample }/>
+                    <Route
+                        render={ ({ location }) => (
+                            <div>
+                                <h2>No pages!</h2>
+                                <p>{ location.pathname }</p>
+                            </div>
+                        )}
+                    />
+                </Switch>
                 <h1>Halo ReactJS</h1>
                 <h2>Golang Based ReactJS</h2>
                 <h3>{ reactText }</h3>
