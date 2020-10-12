@@ -1,0 +1,6 @@
+팀 프로젝트 서브 브랜치 관련
+팀 프로젝트 서브 브랜치 관련 대체 커밋2
+
+팀 프로젝트 관련 커밋3
+    Flask 서버 연동 및 v-env를 통한 Flask 사용 방법 숙지 및
+    문서 작성 진행 중..(Tool: VS Code / OS: Linux, Windows, MacOS)
