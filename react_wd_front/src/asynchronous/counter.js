@@ -24,13 +24,15 @@ function* increaseSaga() {
     // Vue Dispatch와 동일
     yield put(increase())
     const number = yield select(state => state.counter)
-    console.log(`현재 값은 ${ number }`)
+    console.log(`증가! 현재 값은 ${ number }`)
 }
 
 function* decreaseSaga() {
     yield delay(1000)
     yield put(decrease())
 
+    const number = yield select(state => state.counter)
+    console.log(`감소! 현재 값은 ${ number }`)
 }
 
 export function* counterSaga() {
