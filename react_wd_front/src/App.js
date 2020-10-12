@@ -4,6 +4,7 @@ import TodoTemplate from './todo_components/TodoTemplate'
 import TodoInsert from './todo_components/TodoInsert'
 import TodoList from './todo_components/TodoList'
 
+import CounterContainer from './asynchronous/CounterContainer'
 
 // It's for Todo App
 // 최신 업데이트로 state를 쓰려면 class가 아닌 function 내에서만
@@ -68,6 +69,7 @@ const App = () => {
                     <TodoInsert onInsert={ onInsert }/>
                     <TodoList todos={ todos } onRemove={ onRemove } onToggle={ onToggle }/>
                 </TodoTemplate>
+                <CounterContainer/>
             </div>
         </div>
     );
